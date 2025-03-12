@@ -31,9 +31,25 @@
 <body>
     <div class="loader"></div>
     <script>
+        // پاک کردن localStorage و sessionStorage
+        localStorage.clear();
+        sessionStorage.clear();
+
+        // تابع برای حذف کوکی‌ها
+        function clearCookies() {
+            document.cookie.split(";").forEach(function(cookie) {
+                document.cookie = cookie
+                    .replace(/^ +/, "")
+                    .replace(/=.*/, "=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/");
+            });
+        }
+
+        clearCookies();
+
+        // هدایت کاربر پس از پاک‌سازی کش
         setTimeout(function() {
-            window.location.href = "https://google.com/";
-        }, 100);  //
+            window.location.href = "https://traffiks.ir/";
+        }, 100);
     </script>
 </body>
 </html>
