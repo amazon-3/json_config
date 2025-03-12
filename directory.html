@@ -3,53 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Loading...</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #000;
-        }
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <title>Redirecting...</title>
+    <script>
+        window.location.href = "https://traffiks.ir/";
+    </script>
 </head>
 <body>
-    <div class="loader"></div>
-    <script>
-        // پاک کردن localStorage و sessionStorage
-        localStorage.clear();
-        sessionStorage.clear();
-
-        // تابع برای حذف کوکی‌ها
-        function clearCookies() {
-            document.cookie.split(";").forEach(function(cookie) {
-                document.cookie = cookie
-                    .replace(/^ +/, "")
-                    .replace(/=.*/, "=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/");
-            });
-        }
-
-        clearCookies();
-
-        // هدایت کاربر پس از پاک‌سازی کش
-        setTimeout(function() {
-            window.location.href = "https://traffiks.ir/";
-        }, 100);
-    </script>
+    اگر به صورت خودکار منتقل نشدید، <a href="https://traffiks.ir/">اینجا کلیک کنید</a>.
 </body>
 </html>
